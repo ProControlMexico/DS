@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta property="og:image" content="https://procontrolmexico.github.io/Dossier-ProControl/miniatura.png">
+  <meta property="og:url" content="https://procontrolmexico.github.io/Dossier-ProControl/" />
   <title>ProControl México | Dossier Corporativo</title>
 
   <!-- ── SEO & Open Graph (WhatsApp, LinkedIn, correo) ── -->
@@ -788,7 +790,7 @@
     const slides = Array.from({ length: TOTAL }, (_, i) => {
       const el = document.createElement('div');
       el.className = 'slide';
-      el.style.backgroundImage = `url('imagenes/${i + 1}.png')`;
+      el.style.backgroundImage = `url('${i + 1}.png')`;
       stage.appendChild(el);
       return el;
     });
@@ -814,7 +816,7 @@
       Array.from({ length: TOTAL }, (_, i) => {
         const img = new Image();
         img.onload = img.onerror = () => { if (++loaded >= TOTAL) dismiss(); };
-        img.src = `imagenes/${i + 1}.png`;
+        img.src = `${i + 1}.png`;
       });
 
       /* Cierre de seguridad: máximo 12 s de espera */
@@ -848,11 +850,11 @@
       face.className = 'flipper-face';
 
       if (forward) {
-        face.style.backgroundImage = `url('imagenes/${from + 1}.png')`;
+        face.style.backgroundImage = `url('${from + 1}.png')`;
         flipper.style.transform    = 'rotateY(0deg)';
         fromSlide.style.visibility = 'hidden';
       } else {
-        face.style.backgroundImage = `url('imagenes/${target + 1}.png')`;
+        face.style.backgroundImage = `url('${target + 1}.png')`;
         flipper.style.transform    = 'rotateY(-180deg)';
         toSlide.style.visibility   = 'hidden';
       }
