@@ -976,6 +976,7 @@
 
     let wheelLock = false;
     document.addEventListener('wheel', e => {
+      if (menuOpen) return; /* Dejar que el menú lateral haga scroll nativo */
       if (e.ctrlKey || e.metaKey) {
         /* Ctrl/Cmd + rueda → zoom en la posición del cursor */
         e.preventDefault();
