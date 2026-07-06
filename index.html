@@ -691,7 +691,7 @@
     </svg>
   </button>
 
-  <div class="counter" id="counter">1 / 29</div>
+  <div class="counter" id="counter">1 / 32</div>
 
   <!-- ── Hamburger button ───────────────────────────── -->
   <button class="menu-toggle" id="menuToggle" aria-label="Menú">
@@ -762,7 +762,7 @@
     </div>
 
     <div class="menu-footer">
-      <div class="menu-page-info" id="menuPageInfo">Página 1 de 29</div>
+      <div class="menu-page-info" id="menuPageInfo">Página 1 de 32</div>
     </div>
 
   </nav>
@@ -771,7 +771,7 @@
     /* ═══════════════════════════════════════════════════
        SLIDES & FLIP ENGINE
     ═══════════════════════════════════════════════════ */
-    const TOTAL   = 29;
+    const TOTAL   = 32;
     const FLIP_MS = 780;
     const EASE    = 'cubic-bezier(0.77, 0, 0.175, 1)';
     const FADE_MS = 420;
@@ -1059,15 +1059,18 @@
         ]
       },
       { label: 'Plataforma digital CRM', slide: 24 },
-      { label: 'Cumplimiento normativo',  slide: 25 },
+      { label: 'Autonomía tecnológica (IT)', slide: 25 },
+      { label: 'Cumplimiento normativo',  slide: 26 },
+      { label: 'Estandarización operativa', slide: 27 },
+      { label: 'Agente Capacitador Externo STPS', slide: 28 },
       {
         label: 'Nuestros clientes',
         children: [
-          { label: 'Sector público y salud', slide: 26 },
-          { label: 'Sector privado',         slide: 27 },
+          { label: 'Sector público y salud', slide: 29 },
+          { label: 'Sector privado',         slide: 30 },
         ]
       },
-      { label: 'Contacto', slide: 28 },
+      { label: 'Contacto', slide: 31 },
     ];
 
     /* Chevron SVG */
@@ -1081,7 +1084,7 @@
     /* ── Render menu ────────────────────────────────── */
     function buildMenu() {
       MENU.forEach((item, idx) => {
-        if (idx > 0 && (idx === 1 || idx === 7 || idx === 8)) {
+        if (idx > 0 && (idx === 1 || idx === 10 || idx === 11)) {
           const div = document.createElement('div');
           div.className = 'menu-divider';
           menuNav.appendChild(div);
@@ -1343,34 +1346,34 @@
           l: 0.545, t: 0.945, w: 0.45, h: 0.04
         },
 
-        /* ── Página 29: zonas de contacto ──────────────────────── */
+        /* ── Página 32: zonas de contacto ──────────────────────── */
         {
-          slide: 28, label: 'Tel Corporativo',
+          slide: 31, label: 'Tel Corporativo',
           href: 'tel:+525557162876', target: '',
           l: 0.04, t: 0.685, w: 0.220, h: 0.02
         },
         {
-          slide: 28, label: 'WA Corporativo',
+          slide: 31, label: 'WA Corporativo',
           href: WA_BASE + '525540014294?' + 'text=' + WA_MSG, target: '_blank',
           l: 0.04, t: 0.71, w: 0.220, h: 0.02
         },
         {
-          slide: 28, label: 'Tel Operativo',
+          slide: 31, label: 'Tel Operativo',
           href: 'tel:+529992841288', target: '',
           l: 0.04, t: 0.82, w: 0.220, h: 0.02
         },
         {
-          slide: 28, label: 'WA Operativo',
+          slide: 31, label: 'WA Operativo',
           href: WA_BASE + '529992841288?' + 'text=' + WA_MSG, target: '_blank',
           l: 0.04, t: 0.845, w: 0.220, h: 0.02
         },
         {
-          slide: 28, label: 'Sitio Web',
+          slide: 31, label: 'Sitio Web',
           href: 'https://www.procontrolmexico.com', target: '_blank',
           l: 0.545, t: 0.945, w: 0.45, h: 0.04
         },
         {
-          slide: 28, label: 'QR Contacto',
+          slide: 31, label: 'QR Contacto',
           href: 'https://gavainc.github.io/Procontrol-Mexico', target: '_blank',
           l: 0.75, t: 0.67, w: 0.18, h: 0.18
         }
